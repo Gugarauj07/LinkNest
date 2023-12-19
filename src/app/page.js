@@ -1,12 +1,9 @@
-import HeroForm from "./components/HeroForm";
-import Header from "./components/header";
+import HeroForm from "../components/HeroForm";
 
 export default function Home() {
   return (
     <main>
-      <Header />
-
-      <section className="p-4">
+      <section className="pt-32">
         <div className="max-w-md mb-8">
           <h1 className="text-6xl font-bold">
             Your single nest for all connections
