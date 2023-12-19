@@ -15,7 +15,7 @@ export default function Header() {
 
             <nav className="flex items-center gap-4 text-sm text-slate-500">
             <Link href="/login">Sign in</Link>
-            <Link href="/register">Create Account</Link>
+            <Link href="/login">Create Account</Link>
             </nav>
         </header>
            

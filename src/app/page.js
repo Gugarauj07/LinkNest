@@ -1,4 +1,4 @@
-import HeroForm from "./components/HeroForm";
+import HeroForm from "../components/HeroForm";
 
 export default function Home() {
   return (
