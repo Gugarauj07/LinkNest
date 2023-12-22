@@ -21,15 +21,15 @@ export default async function AccountPage({searchParams}) {
 
   const leanPage = cloneDeep(page.toJSON());
   leanPage._id = leanPage._id.toString();
-  // if (page) {
-  //   return (
-  //     <>
-  //       <PageSettingsForm page={leanPage} user={session.user} />
-  //       <PageButtonsForm page={leanPage} user={session.user} />
-  //       <PageLinksForm page={leanPage} user={session.user} />
-  //     </>
-  //   );
-  // }
+  if (page) {
+    return (
+      <>
+        {/* <PageSettingsForm page={leanPage} user={session.user} />
+        <PageButtonsForm page={leanPage} user={session.user} />
+        <PageLinksForm page={leanPage} user={session.user} /> */}
+      </>
+    );
+  }
 
   return (
     <div>

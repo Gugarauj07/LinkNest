@@ -1,6 +1,11 @@
-import HeroForm from "../components/forms/HeroForm";
+import HeroForm from "../../components/forms/HeroForm";
+import {authOptions} from "@/app/api/auth/[...nextauth]/route";
+import {getServerSession} from "next-auth";
+import {redirect} from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession(authOptions);
+
   return (
     <main>
       <section className="pt-32">
@@ -12,7 +17,7 @@ export default function Home() {
             Consolidate your online presence, social profiles, contact details and more in one place
           </h2>
         </div>
-        <HeroForm />
+        <HeroForm user={session?.user}/>
       </section>
       
     </main>
