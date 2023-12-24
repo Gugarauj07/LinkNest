@@ -34,7 +34,6 @@ export default async function Header() {
           {!session && (
             <>
               <Link href={'/login'}>Sign In</Link>
-              <Link href={'/login'}>Create Account</Link>
             </>
           )}
         </nav>
