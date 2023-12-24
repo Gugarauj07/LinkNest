@@ -1,7 +1,7 @@
 import {authOptions} from "@/app/api/auth/[...nextauth]/route";
 // import PageButtonsForm from "@/components/forms/PageButtonsForm";
 // import PageLinksForm from "@/components/forms/PageLinksForm";
-// import PageSettingsForm from "@/components/forms/PageSettingsForm";
+import PageSettingsForm from "@/components/forms/PageSettingsForm";
 import UsernameForm from "@/components/forms/UsernameForm";
 import {Page} from "@/models/Page";
 import mongoose from "mongoose";
@@ -24,8 +24,8 @@ export default async function AccountPage({searchParams}) {
   if (page) {
     return (
       <>
-        {/* <PageSettingsForm page={leanPage} user={session.user} />
-        <PageButtonsForm page={leanPage} user={session.user} />
+        <PageSettingsForm page={leanPage} user={session.user} />
+        {/*<PageButtonsForm page={leanPage} user={session.user} />
         <PageLinksForm page={leanPage} user={session.user} /> */}
       </>
     );
