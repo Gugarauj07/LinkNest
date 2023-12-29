@@ -18,10 +18,10 @@ import {useState} from "react";
 import toast from "react-hot-toast";
 
 export const allButtons = [
-  {key: 'email', 'label': 'e-mail', icon: faEnvelope, placeholder: 'test@example.com'},
-  {key: 'mobile', 'label': 'mobile', icon: faMobile, placeholder: '+46 123 123 123'},
-  {key: 'instagram', 'label': 'instagram', icon: faInstagram, placeholder: 'https://facebook.com/profile/...'},
-  {key: 'facebook', 'label': 'facebook', icon: faFacebook},
+  {key: 'email', 'label': 'e-mail', icon: faEnvelope, placeholder: 'teste@example.com'},
+  {key: 'mobile', 'label': 'mobile', icon: faMobile, placeholder: '+55 11 99999-9999'},
+  {key: 'instagram', 'label': 'instagram', icon: faInstagram, placeholder: 'https://instagram.com/profile/...'},
+  {key: 'facebook', 'label': 'facebook', icon: faFacebook, placeholder: 'https://facebook.com/profile/...'},
   {key: 'discord', 'label': 'discord', icon: faDiscord},
   {key: 'tiktok', 'label': 'tiktok', icon: faTiktok},
   {key: 'youtube', 'label': 'youtube', icon: faYoutube},
@@ -35,8 +35,6 @@ function upperFirst(str) {
 }
 
 export default function PageButtonsForm({user,page}) {
-
-    console.log(page);
 
   const pageSavedButtonsKeys = Object.keys(page.buttons);
   const pageSavedButtonsInfo = pageSavedButtonsKeys
