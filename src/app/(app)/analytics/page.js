@@ -51,13 +51,13 @@ export default async function AnalyticsPage() {
 
   return (
     <div>
-      {/* <SectionBox>
+      <SectionBox>
         <h2 className="text-xl mb-6 text-center">Views</h2>
         <Chart data={groupedViews.map(o => ({
           'date': o._id,
           'views': o.count,
         }))} />
-      </SectionBox> */}
+      </SectionBox>
       <SectionBox>
         <h2 className="text-xl mb-6 text-center">Clicks</h2>
         {page.links.map(link => (

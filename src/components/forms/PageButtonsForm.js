@@ -36,10 +36,12 @@ function upperFirst(str) {
 
 export default function PageButtonsForm({user,page}) {
 
-//   const pageSavedButtonsKeys = Object.keys(page.buttons);
-//   const pageSavedButtonsInfo = pageSavedButtonsKeys
-//     .map(k => allButtons.find(b => b.key === k));
-  const [activeButtons, setActiveButtons] = useState([]);
+    console.log(page);
+
+  const pageSavedButtonsKeys = Object.keys(page.buttons);
+  const pageSavedButtonsInfo = pageSavedButtonsKeys
+    .map(k => allButtons.find(b => b.key === k));
+  const [activeButtons, setActiveButtons] = useState(pageSavedButtonsInfo);
 
   function addButtonToProfile(button) {
     setActiveButtons(prevButtons => {
@@ -58,8 +60,7 @@ export default function PageButtonsForm({user,page}) {
         .filter(button => button.key !== keyToRemove);
     });
   }
-
-  const availableButtons = allButtons.filter(b1 => !activeButtons.find(b2 => b1.key === b2.key));
+  const availableButtons = allButtons.filter(b1 => !activeButtons.find(b2 => b2?.key === b1.key));
 
   return (
     <SectionBox>
