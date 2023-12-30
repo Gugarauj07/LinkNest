@@ -44,6 +44,7 @@ export default async function UserPage({params}) {
   const uri = params.uri;
   mongoose.connect(process.env.MONGO_URI);
   const page = await Page.findOne({uri});
+  console.log(page)
   const user = await User.findOne({email:page.owner});
   await Event.create({uri:uri, page:uri, type:'view'});
   return (

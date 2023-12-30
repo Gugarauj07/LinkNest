@@ -11,10 +11,10 @@ export default async function Home() {
       <section className="pt-32">
         <div className="max-w-md mb-8">
           <h1 className="text-6xl font-bold">
-            Your single nest for all connections
+          Seu único link para todas as conexões
           </h1>
           <h2 className="text-gray-500 text-xl mt-6">
-            Consolidate your online presence, social profiles, contact details and more in one place
+            Consolide sua presença online, perfis sociais, detalhes de contato e mais em um só lugar
           </h2>
         </div>
         <HeroForm user={session?.user}/>
